@@ -16,8 +16,8 @@ provider "restapi" {
 
 provider "curl" {}
 
-module "demo-1" {
-  source = "./demo-1"
+module "restapi" {
+  source = "./restapi"
   
 }
 
@@ -27,10 +27,10 @@ module "curl" {
 }
 
 locals {
-  comments_response = module.demo-1.comments_response
-  comments_data = module.demo-1.comments
-  users_response = module.demo-1.users_response
-  users_data = module.demo-1.users
+  comments_response = module.restapi.comments_response
+  comments_data = module.restapi.comments
+  users_response = module.restapi.users_response
+  users_data = module.restapi.users
   curl_comments = module.curl.all_comments
   curl_comments_name = module.curl.comments_name
 }
