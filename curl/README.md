@@ -1,0 +1,1 @@
+Source: [Curl Provider](https://registry.terraform.io/providers/anschoewe/curl/latest/docs/data-sources/curl)
