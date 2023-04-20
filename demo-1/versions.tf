@@ -9,5 +9,10 @@ terraform {
       source = "hashicorp/null"
       version = "3.2.1"
     }
+
+     curl = {
+      source = "anschoewe/curl"
+      version = "1.0.2"
+    }
   }
 }

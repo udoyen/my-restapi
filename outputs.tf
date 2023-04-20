@@ -13,3 +13,11 @@ output "users" {
 output "users-data" {
     value = local.users_data
 }
+
+output "curl_comments" {
+    value = local.curl_comments
+}
+
+output "curl_comments_name" {
+    value = local.curl_comments_name
+}
