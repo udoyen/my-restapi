@@ -29,9 +29,3 @@ data "restapi_object" "users" {
 #   data = "{\"id\":\"4\",\"name\":\"koko\",\"username\": \"username4\",  \"email\":\"user4@example.com\"}"
   
 # }
-
-# module "restapi" {
-#   source = "./demo-1"
-
-
-# }
