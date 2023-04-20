@@ -1,15 +1,15 @@
 output "comments" {
-    value = data.restapi_object.comments.api_data
+    value = local.comments_response
 }
 
-output "comments-response" {
-    value = data.restapi_object.comments.api_response
+output "comments-data" {
+    value = local.comments_data
 }
 
 output "users" {
-    value = data.restapi_object.users.api_data
+    value = local.users_response
 }
 
-output "users-response" {
-    value = data.restapi_object.users.api_response
+output "users-data" {
+    value = local.users_data
 }

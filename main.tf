@@ -1,3 +1,6 @@
+provider "null" {
+
+}
 provider "restapi" {
 
   # Configuration options
@@ -11,21 +14,28 @@ provider "restapi" {
 
 }
 
-data "restapi_object" "comments" {
-  path = "/comments/"
-  search_key = "id"
-  search_value = "1"
-}
-
-data "restapi_object" "users" {
-  path = "/users/"
-  search_key = "id"
-  search_value = "1"
+module "demo-1" {
+  source = "./demo-1"
   
 }
 
-# resource "restapi_object" "add-user" {
-#   path = "/users/"
-#   data = "{\"id\":\"4\",\"name\":\"koko\",\"username\": \"username4\",  \"email\":\"user4@example.com\"}"
+locals {
+  comments_response = module.demo-1.comments_response
+  comments_data = module.demo-1.comments
+  users_response = module.demo-1.users_response
+  users_data = module.demo-1.users
+}
+
+# resource "null_resource" "api-data" {
+#   provisioner "local-exec" {
+#     when = create
+#     interpreter = [
+      
+#     ]
+#     command = ""
+  
+#   }
   
 # }
+
+
